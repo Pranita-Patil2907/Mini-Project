@@ -1,4 +1,3 @@
-                                   <!-- || SHRI RAM SAMARTH || -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
