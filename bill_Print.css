@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    margin-top: 5rem;
+    width: 90vw;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+/* hero section */
+
+.hero{
+    height: 100px;
+    width: 100%;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(37, 36, 36);
+    color: rgb(250, 159, 98);
+}
+
+.logo img{
+    height: 80px;
+    width: 90px;
+}
+
+.title{
+    font-family: "Playwrite DE Grund", cursive;
+  font-optical-sizing: auto;
+  font-weight:900;
+  font-size: 27px;
+  font-style: normal;
+}
+
+
+/* Adderss Section */
+
+.address{
+    height: 120px;
+    margin: 20px;
+    padding-bottom: 15px;
+    width:100%;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    font-family: "Playwrite DE Grund", cursive;
+    border-bottom: 2px solid gray;
+}
+
+
+
+.add-customer ul li{
+    list-style: none;
+}
+
+.desc-title-1{
+    border-bottom: 1px solid gray;
+    padding-bottom: 1rem;
+    }
+
+.desc-title-1, .desc-content{
+    display: grid;
+    grid-template-columns: 2fr  1fr 1fr 1fr 1fr 1fr;
+    width: 80vw;
+    margin: auto;
+    margin-top: 2rem;
+    gap: 5px;
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+.desc-content{
+    gap: 1px;
+    height: 175px;
+}
+
+.grand-total{
+    display: flex;
+    width: 72vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 80px;
+
+}
+
+.grand-total h2{
+    height: 25px;
+}
+
+
+/* footer */
+
+footer{
+    height: 130px;
+    width: 90vw;
+    margin: auto; 
+    margin-top: 2rem;
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+.panel-01{
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+
+.panel-01, .panel-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+    /* background-color: rgb(171, 157, 157); */
+
+}
+
+.panel-2{
+    text-align: left;
+    color:rgb(230, 92, 0) ;
+    font-weight: bolder;
+}
+
+.thank{
+    width:60vw;
+    margin: auto;
+    /* text-align: left; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Playwrite DE Grund", cursive;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.thank button{
+    padding: 7px;
+    width: 7em;
+    background-color: rgb(230, 92, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.thank button:hover{
+    cursor: pointer;
+}
+
+@media print{
+    .thank button{
+        display: none;
+    }
+
+    .alert{
+        display: none;
+    }
+}
+
+
+
+
+

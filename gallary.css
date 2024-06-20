@@ -1,0 +1,358 @@
+@import url(https://fonts.google.com/specimen/Poppins?query=po);
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppies',sans-serif;
+}
+
+
+nav{
+    height:60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:rgba(0, 0, 0, 0.614) ;
+    opacity: inherit;
+    margin-top: 0.45rem;
+    position: sticky;
+    
+}
+
+.logo{
+    color:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13px; 
+    background-image: url(logo--Taj.png);
+    width: 3.75rem;
+    height:3.75rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Search Bar */
+
+.search{
+    display: flex;
+    width: 500px;
+    height:38px ;
+}
+
+.search:hover{
+    border: 2px solid rgb(250, 159, 98);
+    border-radius: 6.20px;
+}
+
+.search-logo{
+    background-color: rgb(250, 159, 98);
+    width:38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+.search-logo:hover{
+    cursor: pointer;
+    background-color: rgb(248, 198, 18);
+
+}
+
+.search-input{
+    width:550px ;
+    border: none;
+    font-size: 1rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    letter-spacing: 2px;
+    background-color: #ffffff;
+}
+
+
+
+
+
+/* Nav Pages */
+
+.nav-pages a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.20rem;
+    letter-spacing: 0.10rem;
+    /* font-weight:; */
+   color:white;
+}
+.nav-pages a:hover{
+    color:orange;
+
+}
+
+.border{
+    padding: 20px;
+    height: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.border:hover{
+    border: 2px solid rgb(250, 159, 98);
+    border-radius: 5px;
+    
+}
+
+
+
+.nav-pages{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn-stay{
+    height: 38px;
+    width: 7rem;
+    border:none;
+    border-radius: 5px;
+    background-color: rgb(250, 159, 98);
+    font-size: 15px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(32, 32, 32) ;
+}
+
+.btn-stay:hover{
+    cursor: pointer;
+    background-color: rgb(248, 198, 18);
+}
+
+
+/*main image*/
+.img{
+    background-color: whitesmoke;
+    background-image: url(background3.jpg);
+     height: 800px;
+     width: 100%;
+     background-size: cover;
+     background-repeat: no-repeat;
+     opacity:0.92;
+}
+/*mes between image*/
+.img p{
+     color:#ffffff;
+     width: 50%;
+    font-size: 45px;
+    font-family:'align-items: center';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 5px;
+    background-color:rgba(216, 112, 147, 0.843);
+    margin-top: 18%;
+    margin-left:25% ;
+    padding: 50px;
+    border-radius: 25px;
+}
+.photo{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+}
+.info{
+    display: flex;
+    height: 500px;
+    align-items: center;
+    padding: 20px;
+    background-color: #e2e2e2;
+}
+/*info of taj hotail*/
+.detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:400px ;
+    width: 45%;
+    background-color: #ffffff;
+    font-size: 18px;
+    color: #686868;
+    padding: 21px;
+
+}
+.heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+/*image of taj logo*/
+.heading .logo{
+    background-image: url(phto15.jpeg);
+    height: 400px;
+    width: 85%;
+    background-color: #222;
+}
+/*heading of photo gallary*/
+.head{
+    padding: 30px;
+}
+.head h3{
+    
+    font-size: 3em;
+    font-weight: bolder;
+    border-bottom: 3px solid #222;
+}
+.heading h3 span{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder;
+    
+}
+.photo .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.photo .box .dream{
+    display: flex;
+    flex-direction:column;
+    width: 32.5%;
+}
+.photo .box .dream img{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+.btn1 button{
+    background-color:aliceblue;
+    padding: 15px;
+    margin-left:40px;
+    border-color:#d29751;
+    border-width: 3px;
+    font-size: 2em;
+    color: #bc7114;
+    letter-spacing: 1px;
+    margin-top: 20px;
+ }
+    
+
+/* Footer Section */
+/* Panel 1 */
+.foot-logo{
+    height: 100px;
+    width: 100%px;
+    background-color:#043c46 ;
+    border-top: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot-logo img{
+    height: 60px;
+    width: 90px;
+}
+
+/* Panel 2 */
+
+/* .foot-hero-img{
+    background-image: url(Mumbai.webp);
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+} */
+
+.foot-panel2{
+    height: 350px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact{
+   
+    color: white;
+    margin:20 ;
+    font-size: 17px;
+   
+}
+.contact i{
+    font-size: 25px;
+    margin: 15px;
+}
+
+.contact p:hover{
+    color:#007185 ;
+    cursor: pointer;
+}
+
+.contact-content{
+    display: flex;
+}
+
+
+
+
+.mail{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+ul a{
+    display: block;
+    margin: 20px;
+    font-size:1.20rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+ul a:hover{
+    color:#007185;
+    text-decoration: underline;
+}
+
+.social-media{
+    
+    color: white;
+    font-size: 30px;
+}
+
+.social-media i{
+    margin: 25px;
+}
+
+.social-media i:hover{
+    color:#007185 ;
+    cursor: pointer
+}
+
+/* Panel 3 */
+
+.copyright{
+    height: 50px;
+    background-color: #043c46;
+    color: white;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 0.80rem;
+}
+
