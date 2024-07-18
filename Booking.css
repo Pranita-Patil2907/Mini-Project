@@ -32,7 +32,7 @@
 .book_destination{
     width:64.5%;
     height: 50px;
-    margin-bottom: 39rem; 
+    margin-bottom: 40rem; 
     border: none;
     border-radius: 10px;
     background-color: whitesmoke;
@@ -73,7 +73,8 @@
  input[type=radio],
  input[type=text],
  input[type=tel],
- input[type=email]{
+ input[type=email],
+ textarea{
     background-color: rgb(173, 170, 170);
     color: rgb(84, 82, 82);
     font-size: 1rem;

@@ -46,6 +46,8 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
     $lname = $_GET['lname'];
     $email = $_GET['email'];
     $phone = $_GET['phone'];
+    $address = $_GET['address'];
+
 
     $sql1= "SELECT * FROM `rooms` WHERE room_id = '$room_type' ";
     $result1 = mysqli_query($conn, $sql1);
@@ -55,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
 
 
 
-    $sql = "INSERT INTO `booking` (`destination`, `room_type`, `no_rooms`, `no_days`, `check_in`, `check_out`, `fname`, `mname`, `lname`, `email`, `phone` , `taxable_amt`, `GST`, `Amount` ,`date_time`) VALUES ('$destination', '$room_name', '$no_rooms', '$no_days', '$check_in', '$check_out', '$fname', '$mname', '$lname', '$email', ' $phone', 0 ,0 , 0,  current_timestamp());";
+    $sql = "INSERT INTO `booking` (`destination`, `room_type`, `no_rooms`, `no_days`, `check_in`, `check_out`, `fname`, `mname`, `lname`, `email`, `phone`, `Address`, `taxable_amt`, `GST`, `Amount` ,`date_time`) VALUES ('$destination', '$room_name', '$no_rooms', '$no_days', '$check_in', '$check_out', '$fname', '$mname', '$lname', '$email', ' $phone', '$address',  0 ,0 , 0,  current_timestamp());";
 
     $result = mysqli_query($conn, $sql);
 

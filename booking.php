@@ -83,6 +83,7 @@
                 <div class="contact">
                     <input type="email" name="email" id="" placeholder="Email" required>
                     <input type="tel" name="phone" id="" placeholder="Phone" maxlength="10" required>
+                    <textarea placeholder="Address" name="address" id=""></textarea>
                 </div>
             </div>
 

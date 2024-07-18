@@ -7,10 +7,33 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+      <style>
+        @media print{
+            .button, .menu{
+                display: none;
+            }
+
+            .bill{
+                width: 90%;
+                border: 1px solid black;
+                margin-top: 30px;
+            }
+
+            .content{
+                width: 90%;
+                margin: auto;
+            }
+            
+        }
+      </style>
+
     <title>Taj | Dashboard</title>
   </head>
+
+
+
   <body>
     <div class="main-container">
       <div class="menu">
@@ -33,6 +56,7 @@
                 $mname = $row['mname'];
                 $lname = $row['lname'];
                 $phone = $row['phone'];
+                $address = $row['Address'];
                 $email = $row['email'];
                 $destination = $row['destination'];
                 $room_type = $row['room_type'];
@@ -55,7 +79,7 @@
                 <!-- Customer Details -->
                 <h3>Customer Details</h3>
                 <p><em><b>Customer Name :</b></em>       &nbsp; <?php echo $fname ." " .$mname." ".$lname; ?></p>
-                <p><em><b>Address :</b></em>   &nbsp; Kolhapur  </p>
+                <p><em><b>Address :</b></em>   &nbsp; <?php echo $address?>  </p>
                 <p><em><b>Phone :</b></em>    &nbsp;<?php echo $phone  ?></p>
                 <p><em><b>Email :</b></em>   &nbsp; <?php echo $email  ?></p>
                 <hr>
@@ -76,7 +100,7 @@
                 <br>
                 <br>
                 <!-- Print Button -->
-                 <button class="button">Print</button>
+                 <button class="button" onclick="Print()">Print</button>
            </div>
 
 
@@ -85,6 +109,11 @@
       </div>
 
     </div>
+    <script>
+        function Print(){
+            window.print();
+        }
+    </script>
 
   </body>
 </html>
