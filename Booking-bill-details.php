@@ -19,12 +19,7 @@
       </div>
 
       <div class="content">
-        <div class="search">
-          <button class="search-btn">Search</button>
-          <input
-            type="text" name="search-text" class="search-text" id="search-text" placeholder="Enter Text" />
-        </div>
-
+       
         <div class="card-section">
           <!-- Bill Details -->
 
