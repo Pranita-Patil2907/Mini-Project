@@ -55,7 +55,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
 
 
 
-    $sql = "INSERT INTO `booking` (`destination`, `room_type`, `no_rooms`, `no_days`, `check_in`, `check_out`, `fname`, `mname`, `lname`, `email`, `phone` , `date_time`) VALUES ('$destination', '$room_name', '$no_rooms', '$no_days', '$check_in', '$check_out', '$fname', '$mname', '$lname', '$email', ' $phone' , current_timestamp());";
+    $sql = "INSERT INTO `booking` (`destination`, `room_type`, `no_rooms`, `no_days`, `check_in`, `check_out`, `fname`, `mname`, `lname`, `email`, `phone` , `taxable_amt`, `GST`, `Amount` ,`date_time`) VALUES ('$destination', '$room_name', '$no_rooms', '$no_days', '$check_in', '$check_out', '$fname', '$mname', '$lname', '$email', ' $phone', 0 ,0 , 0,  current_timestamp());";
 
     $result = mysqli_query($conn, $sql);
 
@@ -119,7 +119,7 @@ date_default_timezone_set("Asia/Calcutta");
         $sql = "SELECT * FROM `rooms` WHERE room_id='$room_type';";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
-        $charges = $row['charges'];
+        $charges = $row['rates'];
 
 
 
@@ -146,7 +146,9 @@ date_default_timezone_set("Asia/Calcutta");
         $taxableAmt = $no_rooms * $no_days * $charges;
         $taxableAmt = (int) $taxableAmt;
 
-        $grandTotal = $taxableAmt + $taxableAmt * $GST;
+        $GST_amt = ($taxableAmt * $GST);
+
+        $grandTotal = $taxableAmt + $GST_amt;
         $grandTotal = (int) $grandTotal;
 
         echo mysqli_error($conn);
@@ -196,8 +198,17 @@ date_default_timezone_set("Asia/Calcutta");
 </footer>
 <div class="thank">
     <p><i class="fa-regular fa-heart"></i>  Thank You !</p>
-    
-    </div>
+</div>
+
+
+<!-- Inserting Taxable Amt, GST and Grand Total to DB -->
+<?php
+$sql = "UPDATE `booking` SET `taxable_amt` = $taxableAmt, `GST` = $GST_amt, `Amount` = $grandTotal WHERE `booking`.`Sr.No` = $invoice";
+$result = mysqli_query($conn, $sql);
+if(!$result){
+    die("Falied to insert Amount into DB.". mysqli_error($conn));
+}
+?>
 
 
     <script>

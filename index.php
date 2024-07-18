@@ -26,6 +26,8 @@
     include "partials/_dbconnect.php";
     $method = $_SERVER['REQUEST_METHOD'];
     if($method == "POST"){
+        $user_name="";
+        $feedback="";
         $user_name = $_POST['user_name'];
         $feedback = $_POST['feedback'];
 
@@ -34,6 +36,8 @@
         if(!$result){
             echo ' Error ---->'. mysqli_error($conn);
         }
+
+       
     }
  ?>
  <div class="main">
@@ -88,8 +92,8 @@
       echo '<div class="box1 box">
     <div class="box-content">
          <h2> '.$dest_name.'</h2>
-         <div class="bg_img" style= "background-image: url(\''.$dest_name.'.jpg\');"></div>
-        <a href="Popular_destination.php?dest_id='.$dest_id.'"> View Details</a>
+<div class="bg_img"style="background-image:url('.$dest_name.'.jpg);"></div>
+<a href="Popular_destination.php?dest_id='.$dest_id.'"> View Details</a>
     </div> 
 </div>';
         
@@ -164,7 +168,7 @@
                     <br>
                     <p> <em>- '.$user_name.' </em></p>
                 </div>';
-}
+                }
                         
             ?>
             </div>

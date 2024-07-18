@@ -445,9 +445,19 @@ nav{
 }
 
 .R{
-    padding: 30px;
+    /* padding: 30px; */
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 450px;
 }
+
+/* .R:nth-child(3) em{
+    display: flex;
+    text-align: right;
+} */
 
 .feedback{
     width: 80%;

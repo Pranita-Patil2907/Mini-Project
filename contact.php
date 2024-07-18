@@ -85,7 +85,7 @@ $desc = $_POST['desc'];
 $servername="localhost";
 $username="root";
 $password="";
-$database="dbforms";
+$database="taj";
 
 $conn=mysqli_connect($servername, $username, $password, $database);
 
@@ -99,7 +99,7 @@ die("Sorry we are failed connect");
 
 // Inserting Data:
 
-$sql="INSERT INTO `project form 1` (`Name`, `Email`, `User Message`) VALUES ('$name', '$email', '$desc')";
+$sql="INSERT INTO `contact_info` (`Name`, `Email`, `User Message`) VALUES ('$name', '$email', '$desc')";
 
 $result=mysqli_query($conn, $sql);
 

@@ -26,7 +26,7 @@ while($row = mysqli_fetch_assoc($result)){
     $adults = $row['adults'];
     $children = $row['children'];
     $feature = $row['feature'];
-    $rates = $row['charges'];
+    $rates = $row['rates'];
 
 
 echo '<div class="page">
